@@ -47,7 +47,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            React Redux d
+            React Redux and tailwind
           </a>
         </span>
       </header>

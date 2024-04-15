@@ -1,12 +1,16 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
-import logo from "./favicon.png"
+import {
+  Bars3Icon,
+  BellIcon,
+  XMarkIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/24/outline";
+import logo from "./favicon.png";
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
   { name: "Orders", href: "#", current: false },
   { name: "Issues", href: "#", current: false },
-
 ];
 
 function classNames(...classes) {
@@ -68,9 +72,10 @@ export default function Navbar() {
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
                   <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-              
-                  </button>
-                  <span className="inline-flex items-center rounded-md mb-7 -ml-3 bg-red-500 font-medium text-xs ring-1 ring-inset py-1 px-2 text-red-900  ">5</span>
+                </button>
+                <span className="inline-flex items-center rounded-md mb-7 -ml-3 bg-red-500 font-medium text-xs ring-1 ring-inset py-1 px-2 text-red-900  ">
+                  5
+                </span>
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
@@ -131,6 +136,19 @@ export default function Navbar() {
                             )}
                           >
                             Sign out
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
+                          >
+                            Login
                           </a>
                         )}
                       </Menu.Item>

@@ -7,6 +7,7 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import logo from "./favicon.png";
+import { Link } from "react-router-dom";
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
   { name: "Orders", href: "#", current: false },
@@ -38,11 +39,13 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
+                <Link to='/'> 
+                <img
                     className="h-8 w-auto rounded-full"
                     src={logo}
                     alt="Your Company"
                   />
+                  </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -65,7 +68,9 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
+              
+                <Link to='/cart'>
+                  <button
                   type="button"
                   className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
@@ -73,6 +78,7 @@ export default function Navbar() {
                   <span className="sr-only">View notifications</span>
                   <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
+                </Link>
                 <span className="inline-flex items-center rounded-md mb-7 -ml-3 bg-red-500 font-medium text-xs ring-1 ring-inset py-1 px-2 text-red-900  ">
                   5
                 </span>

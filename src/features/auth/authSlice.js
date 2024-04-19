@@ -1,10 +1,10 @@
-import { createAsyncThunk,createSlice } from "@reduxjs/toolkit";
-import { fetchCount } from "./authApi";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { fetchCount } from './authAPI';
 
-const initialState={
-    value:0,
-    status:'idle'
-}
+const initialState = {
+  value: 0,
+  status: 'idle',
+};
 
 export const incrementAsync = createAsyncThunk(
   'counter/fetchCount',
@@ -22,7 +22,6 @@ export const counterSlice = createSlice({
     increment: (state) => {
       state.value += 1;
     },
-
   },
   extraReducers: (builder) => {
     builder
@@ -39,6 +38,5 @@ export const counterSlice = createSlice({
 export const { increment } = counterSlice.actions;
 
 export const selectCount = (state) => state.counter.value;
-
 
 export default counterSlice.reducer;

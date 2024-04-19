@@ -6,7 +6,6 @@ const initialState = {
   status: 'idle',
 };
 
-
 export const incrementAsync = createAsyncThunk(
   'counter/fetchCount',
   async (amount) => {
@@ -23,7 +22,6 @@ export const counterSlice = createSlice({
     increment: (state) => {
       state.value += 1;
     },
-
   },
   extraReducers: (builder) => {
     builder
@@ -40,6 +38,5 @@ export const counterSlice = createSlice({
 export const { increment } = counterSlice.actions;
 
 export const selectCount = (state) => state.counter.value;
-
 
 export default counterSlice.reducer;

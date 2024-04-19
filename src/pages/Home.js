@@ -1,18 +1,16 @@
-import React from "react";
-import Navbar from "../features/navbar/Navbar";
-import ProductList from "../features/product-list/components/ProductList";
-import Carousel from "../features/Carousel/Carousel";
-import Footer from "../features/components/Footer";
+import Footer from "../features/footer/Footer";
+import NavBar from "../features/navbar/Navbar";
+import ProductList from "../features/product/components/ProductList";
 
 function Home() {
-  return (
-    <div>
-      <Navbar />
-      <Carousel />
-      <ProductList />
-      <Footer/>
-    </div>
-  );
+    return ( 
+        <div>
+            <NavBar>
+                <ProductList></ProductList>
+            </NavBar>
+            <Footer/>
+        </div>
+     );
 }
 
 export default Home;

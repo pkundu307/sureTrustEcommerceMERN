@@ -1,4 +1,3 @@
-import Footer from "../features/footer/Footer";
 import NavBar from "../features/navbar/Navbar";
 import ProductList from "../features/product/components/ProductList";
 
@@ -8,7 +7,6 @@ function Home() {
             <NavBar>
                 <ProductList></ProductList>
             </NavBar>
-            <Footer/>
         </div>
      );
 }

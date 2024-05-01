@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <>
@@ -35,7 +38,7 @@ function Footer() {
               © CoderDost, 2023.{' '}
             </p>
             <div className="order-1 md:order-2">
-              <span className="px-2">About us</span>
+            <Link to={'/about'} ><span class="px-2">About us</span></Link>
               <span className="px-2 border-l">Contact us</span>
               <span className="px-2 border-l">Privacy Policy</span>
             </div>

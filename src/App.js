@@ -28,6 +28,8 @@ import AdminOrdersPage from './pages/AdminOrdersPage';
 import { positions, Provider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
 import About from "./pages/About";
+import PrivacyPage from './pages/PrivacyPage';
+
 
 const options = {
   timeout: 5000,
@@ -54,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <LoginPage></LoginPage>,
+  },
+  {
+    path: '/privacy',
+    element: <PrivacyPage></PrivacyPage>
   },
   {
     path: '/signup',

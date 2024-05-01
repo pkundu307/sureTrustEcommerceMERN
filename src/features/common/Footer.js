@@ -40,7 +40,9 @@ function Footer() {
             <div className="order-1 md:order-2">
             <Link to={'/about'} ><span class="px-2">About us</span></Link>
               <span className="px-2 border-l">Contact us</span>
+              <Link to="/privacy">
               <span className="px-2 border-l">Privacy Policy</span>
+              </Link>
             </div>
           </div>
         </div>

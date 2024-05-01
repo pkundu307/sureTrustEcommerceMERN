@@ -71,45 +71,45 @@ const About = () => {
         <div className="w-full md:flex mx-auto">
           <div className="md:w-[50%] my-12">
             <div className="flex text-center">
-              <div className="m-4 h-40 w-40 p-4 bg-green-300 hover:scale-105 duration-300">
+              <div className="m-4 h-40 w-40 p-4 bg-indigo-600 hover:scale-105 duration-300">
                 <h3 className="text-white">Our Services</h3>
                 <img
                   src={Customer}
                   alt=""
-                  className="h-10 w-10 mx-auto bg-green-300"
+                  className="h-10 w-10 mx-auto bg-indigo-600"
                 />
                 <p className="text-black">
                   Lorem ipsum dolor sit amet consectetur
                 </p>
               </div>
-              <div className="m-4 h-40 w-40 p-4 bg-green-300 hover:scale-105 duration-300">
+              <div className="m-4 h-40 w-40 p-4 bg-indigo-600 hover:scale-105 duration-300">
                 <h3 className="text-white">Our Products</h3>
                 <img
                   src={Products}
                   alt=""
-                  className="h-10 w-10 mx-auto bg-green-300"
+                  className="h-10 w-10 mx-auto bg-indigo-600"
                 />
                 <p className="text-black">
                   Lorem ipsum consectetur adipisicing.
                 </p>
               </div>
-              <div className="m-4 h-40 w-40 p-4 bg-green-300 hover:scale-105 duration-300">
+              <div className="m-4 h-40 w-40 p-4 bg-indigo-600 hover:scale-105 duration-300">
                 <h3 className="text-white">Our Vision</h3>
                 <img
                   src={Vision}
                   alt=""
-                  className="h-10 w-10 mx-auto bg-green-300"
+                  className="h-10 w-10 mx-auto bg-indigo-600"
                 />
                 <p className="text-black">
                   Lorem ipsum consectetur adipisicing.
                 </p>
               </div>
-              <div className="m-4 h-40 w-40 p-4 bg-green-300 hover:scale-105 duration-300">
+              <div className="m-4 h-40 w-40 p-4 bg-indigo-600 hover:scale-105 duration-300">
                 <h3 className="text-white">Our Team</h3>
                 <img
                   src={Team}
                   alt=""
-                  className="h-10 w-10 mx-auto bg-green-300"
+                  className="h-10 w-10 mx-auto bg-indigo-600"
                 />
                 <p className="text-black">
                   Lorem ipsum consectetur adipisicing.
@@ -153,7 +153,7 @@ const About = () => {
                   className="outline-none mx-3 border-0 text-gray-900 bg-transparent px-2 py-1 caret-black w-[80%]"
                 />
               </div>
-              <button className="bg-green-300 text-black rounded-lg h-10 w-20 mx-[45%] my-4 mt-2">
+              <button className="bg-indigo-600 text-black rounded-lg h-10 w-20 mx-[45%] my-4 mt-2">
                 JOIN
               </button>
             </form>
@@ -164,7 +164,7 @@ const About = () => {
           <Slider {...settings}>
             {data.map((d) => (
               <div className="bg-white h-[450px] text-black rounded-xl">
-                <div className="h-56 rounded-t-xl bg-green-300 flex justify-center items-center px-4 py-4 ">
+                <div className="h-56 rounded-t-xl bg-indigo-600 flex justify-center items-center px-4 py-4 ">
                   <img src={d.img} alt="" className="h-44 w-44 rounded-full" />
                 </div>
                 <div className="flex flex-col justify-center items-center gap-4">
@@ -207,7 +207,7 @@ const About = () => {
         </address>
       </div>
       <div className="flex justify-center">
-        <button className="bg-green-300 text-black  p-5 rounded-xl font-semibold hover:scale-105 duration-3">
+        <button className="bg-indigo-600 text-black  p-5 rounded-xl font-semibold hover:scale-105 duration-3">
           Subscribe For NewsLetter!!
         </button>
       </div>

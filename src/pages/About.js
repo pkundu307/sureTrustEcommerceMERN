@@ -127,23 +127,6 @@ const About = () => {
                 </div>
                 <div className="m-4 w-full md:w-1/4">
                   
-                {/* Adjusted width for smaller screens */}
-                <div className="h-40 md:h-auto w-full p-4 bg-indigo-600 hover:scale-105 duration-300 rounded-3xl">
-                  
-                  {/* Added rounded corners */}
-                  <h3 className="text-white">Our Services</h3>
-                  <img
-                    src={Customer}
-                    alt=""
-                    className="h-10 w-10 mx-auto bg-indigo-600"
-                  />
-                  <p className="text-black">
-                    Lorem ipsum dolor sit amet consectetur
-                  </p>
-                </div>
-              </div>
-                <div className="m-4 w-full md:w-1/4">
-                  
                   {/* Adjusted width for smaller screens */}
                   <div className="h-40 md:h-auto w-full p-4 bg-indigo-600 hover:scale-105 duration-300 rounded-3xl">
                     
@@ -185,12 +168,13 @@ const About = () => {
 
           {/* Repeat the above structure for other service/product/team sections */}
         </div>
-        <div className="w-full md:flex mx-auto justify-center">
+        <div className="w-full md:flex mx-auto">
           {/* Adjusted width and margin for smaller screens */}
           <div className="md:w-full md:mx-0 mx-4 my-8">
             <h3 className="text-center mt-2">JOIN US</h3>
             <form className="">
               <div className="md:w-[50%] ">
+                <h3 className="text-center mt-2">JOIN US</h3>
                 <form className="">
                   <div className="h-22 border p-4 m-3 bg-gray-300">
                     <label htmlFor="email" className="text-black">

@@ -7,6 +7,7 @@ import Customer from "./About_images/customer-service.png";
 import Team from "./About_images/teamwork.png";
 import Vision from "./About_images/opportunity.png";
 import Products from "./About_images/product.png";
+import Footer from "../features/common/Footer";
 // import Pic1 from "./About_images/pic1.jpg";
 // import Pic2 from "./About_images/pic2.webp";
 // import Pic3 from "./About_images/pic3.jpg";
@@ -52,6 +53,7 @@ const About = () => {
     slidesToScroll: 1,
   };
   return (
+    <>
     <div className="bg-white-900 text-black pb-6">
       <div>
         <Navbar />
@@ -69,12 +71,12 @@ const About = () => {
             consequuntur repudiandae cupiditate laboriosam voluptas nihil?
           </p>
         </div>
-        <div className="flex flex-wrap justify-center md:justify-start">
+        <div className="flex justify-center"  >
           {/* Adjusted alignment for smaller screens */}
           <div className="w-full md:flex mx-auto justify-center">
             <div className="md:w-full my-12 justify-center">
               <div className="flex flex-wrap justify-center md:justify-start">
-                <div className="m-4 w-full md:w-1/4">
+                <div className="m-4 w-full md:w-1/6">
                   
                   {/* Adjusted width for smaller screens */}
                   <div className="h-40 md:h-auto w-full p-4 bg-indigo-600 hover:scale-105 duration-300 rounded-3xl">
@@ -91,7 +93,7 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <div className="m-4 w-full md:w-1/4">
+                <div className="m-4 w-full md:w-1/6">
                   
                   {/* Adjusted width for smaller screens */}
                   <div className="h-40 md:h-auto w-full p-4 bg-indigo-600 hover:scale-105 duration-300 rounded-3xl">
@@ -108,7 +110,7 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <div className="m-4 w-full md:w-1/4">
+                <div className="m-4 w-full md:w-1/6">
                   
                   {/* Adjusted width for smaller screens */}
                   <div className="h-40 md:h-auto w-full p-4 bg-indigo-600 hover:scale-105 duration-300 rounded-3xl">
@@ -125,7 +127,7 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <div className="m-4 w-full md:w-1/4">
+                <div className="m-4 w-full md:w-1/6">
                   
                   {/* Adjusted width for smaller screens */}
                   <div className="h-40 md:h-auto w-full p-4 bg-indigo-600 hover:scale-105 duration-300 rounded-3xl">
@@ -142,7 +144,7 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <div className="m-4 w-full md:w-1/4">
+                <div className="m-4 w-full md:w-1/6">
                   
                   {/* Adjusted width for smaller screens */}
                   <div className="h-40 md:h-auto w-full p-4 bg-indigo-600 hover:scale-105 duration-300 rounded-3xl">
@@ -168,55 +170,51 @@ const About = () => {
 
           {/* Repeat the above structure for other service/product/team sections */}
         </div>
+    
         <div className="w-full md:flex mx-auto">
-          {/* Adjusted width and margin for smaller screens */}
-          <div className="md:w-full md:mx-0 mx-4 my-8">
-            <h3 className="text-center mt-2">JOIN US</h3>
-            <form className="">
-              <div className="md:w-[50%] ">
-                <h3 className="text-center mt-2">JOIN US</h3>
-                <form className="">
-                  <div className="h-22 border p-4 m-3 bg-gray-300">
-                    <label htmlFor="email" className="text-black">
-                      Full Name:
-                    </label>
-                    <input
-                      type="name"
-                      id="name"
-                      placeholder="Enter name"
-                      className="outline-none mx-3 border-0 bg-transparent text-gray-900 px-2 py-1 caret-black w-[80%]"
-                    />
-                  </div>
-                  <div className="h-22 border p-4 m-3 bg-gray-300">
-                    <label htmlFor="email" className="text-black">
-                      Email:
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      placeholder="Enter email"
-                      className="outline-none mx-3 border-0 bg-transparent text-gray-900 px-2 py-1 caret-black w-[80%]"
-                    />
-                  </div>
-                  <div className="h-22 border p-4 m-3 bg-gray-300">
-                    <label htmlFor="email" className="text-black">
-                      Password:
-                    </label>
-                    <input
-                      type="password"
-                      id="password"
-                      placeholder="Password"
-                      className="outline-none mx-3 border-0 text-gray-900 bg-transparent px-2 py-1 caret-black w-[80%]"
-                    />
-                  </div>
-                  <button className="bg-indigo-600 text-black rounded-lg h-10 w-20 mx-[45%] my-4 mt-2">
-                    JOIN
-                  </button>
-                </form>
-              </div>
-            </form>
-          </div>
+        {/* Adjusted width and margin for smaller screens */}
+        <div className="md:w-full md:mx-0 mx-4 my-8">
+       
+        <form className="">
+        <div className="md:w-[50%] mx-auto"> {/* Added mx-auto to center the form on smaller screens */}
+          <h3 className="text-center mt-2">JOIN US</h3>
+          <form className="">
+            <div className="h-22 border p-4 m-3 bg-gray-300">
+              <label htmlFor="email" className="text-black">
+                Full Name:
+              </label>
+              <input
+                type="name"
+                id="name"
+                placeholder="Enter name"
+                className="outline-none mx-3 border-0 bg-transparent text-gray-900 px-2 py-1 caret-black w-full"
+              />
+            </div>
+            <div className="h-22 border p-4 m-3 bg-gray-300">
+              <label htmlFor="email" className="text-black">
+                Email:
+              </label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter email"
+                className="outline-none mx-3 border-0 bg-transparent text-gray-900 px-2 py-1 caret-black w-full"
+              />
+            </div>
+            <button className="bg-indigo-600 text-black rounded-full h-10 w-20 mx-auto my-4 mt-2 text-white"  style={{marginLeft:'300px'}}> {/* Changed to rounded-full for rounded border radius */}
+              JOIN
+            </button>
+          </form>
         </div>
+      </form>
+      
+        </div>
+      </div>
+      
+
+
+
+
         <div className="w-full md:w-3/4 m-auto mt-20 mb-20">
         <Slider {...settings}>
         {data.map((d, index) => (
@@ -236,31 +234,26 @@ const About = () => {
       
         </div>
         <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
-          <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8 justify-center">
-            <div className="w-[500px] md:w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-gray-100 text-black  hover:bg-white">
-              <h2 className="text-4xl font-bold text-center py-8">
-                44 million
-              </h2>
-              <p className="text-center text-2xl font-bold">
-                Transactions every 24 hours
-              </p>
-            </div>
-            <div className="w-3500px] md:w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-gray-100 text-black  hover:bg-white">
-              <h2 className="text-4xl font-bold text-center py-8">
-                $119 trillion
-              </h2>
-              <p className="text-center text-2xl font-bold">
-                Assets under holding
-              </p>
-            </div>
-            <div className="w-[500px] md:w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-gray-100 text-black  hover:bg-white">
-              <h2 className="text-4xl font-bold text-center py-8">46,000</h2>
-              <p className="text-center text-2xl font-bold">
-                New users annually
-              </p>
-            </div>
+        <div className="w-full md:w-auto">
+          <div className="max-w-[500px] md:max-w-full mx-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-gray-100 text-black hover:bg-white">
+            <h2 className="text-4xl font-bold text-center py-8">44 million</h2>
+            <p className="text-center text-2xl font-bold">Transactions every 24 hours</p>
           </div>
         </div>
+        <div className="w-full md:w-auto">
+          <div className="max-w-[500px] md:max-w-full mx-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-gray-100 text-black hover:bg-white">
+            <h2 className="text-4xl font-bold text-center py-8">$119 trillion</h2>
+            <p className="text-center text-2xl font-bold">Assets under holding</p>
+          </div>
+        </div>
+        <div className="w-full md:w-auto">
+          <div className="max-w-[500px] md:max-w-full mx-auto shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-gray-100 text-black hover:bg-white">
+            <h2 className="text-4xl font-bold text-center py-8">46,000</h2>
+            <p className="text-center text-2xl font-bold">New users annually</p>
+          </div>
+        </div>
+      </div>
+      
       </div>
       <div className="border-2 mb-4 mx-4 md:mx-14 text-center w-full md:w-500 h-auto">
         <address>
@@ -278,6 +271,8 @@ const About = () => {
         </button>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

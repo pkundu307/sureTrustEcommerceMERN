@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 import { useSelector } from "react-redux";
@@ -6,7 +6,7 @@ import { selectOrders } from "../order/orderSlice";
 
 function OrderSummary({ onClose }) {
   const order = useSelector(selectOrders);
-  console.log(order[order.length-1]);
+  const lastOrder = order[order.length - 1]; // Access the last order
 
   let date = new Date().toLocaleDateString("de-DE");
 
@@ -43,20 +43,21 @@ function OrderSummary({ onClose }) {
                 <td className="px-6 py-3 text-left ">{date}</td>
                 <td className="px-6 py-3 text-left ">024-125478956</td>
                 <td className="px-6 py-3 text-left ">
-                  {order[0].paymentMethod}
+                  {lastOrder?.paymentMethod} {/* Display payment method of last order */}
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        {order.map((order) => (
-          <div key={order.id}>
-            {order.items.map((item) => (
-              <div className="flex mb-5">
+        {lastOrder && (
+          <div>
+            {lastOrder.items.map((item) => (
+              <div key={item.id} className="flex mb-5">
                 <img
                   src={item.product.images[0]}
                   className="w-20 h-20 rounded-xl ml-8"
+                  alt={item.product.title}
                 />
                 <div className="ml-8 text-left">
                   <p className="font-bold">{item.product.title}</p>
@@ -66,16 +67,14 @@ function OrderSummary({ onClose }) {
               </div>
             ))}
           </div>
-        ))}
-
-        <div></div>
+        )}
 
         <div className="border-b border-gray-500 ml-10 mr-10"></div>
 
         <div className=" text-gray-500 font-bold">
           <div className="flex justify-between mt-2">
             <p className="ml-10">Sub Total</p>
-            <p className="mr-10">₹{order[0]?.totalAmount}</p>
+            <p className="mr-10">₹{lastOrder?.totalAmount}</p>
           </div>
           <div className="flex justify-between mt-2">
             <p className="ml-10">Shipping</p>
@@ -91,10 +90,12 @@ function OrderSummary({ onClose }) {
 
         <div className="flex justify-between font-bold text-xl mt-4">
           <p className="ml-10">Order Total</p>
-          <p className="mr-10">₹{order[0]?.totalAmount+2+5}</p>
+          <p className="mr-10">
+            ₹{lastOrder?.totalAmount + 2 + 5}
+          </p>
         </div>
         <Link to="/">
-          <button className="bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-lg w-36">
+          <button style={{marginLeft:'40px'}} className="bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-lg w-36">
             Back to Home
           </button>
         </Link>

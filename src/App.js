@@ -31,9 +31,10 @@ import AdminProductFormPage from './pages/AdminProductFormPage';
 import AdminOrdersPage from './pages/AdminOrdersPage';
 import { positions, Provider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
-import StripeCheckout from './pages/StripeCheckout';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import About from './pages/About';
+import ContactUs from './pages/ContactUs';
+import Privacy from './pages/PrivacyPolicy';
 
 const options = {
   timeout: 5000,
@@ -146,14 +147,6 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/stripe-checkout/',
-    element: (
-      <Protected>
-        <StripeCheckout></StripeCheckout>
-      </Protected>
-    ),
-  },
-  {
     path: '/logout',
     element: <Logout></Logout>,
   },
@@ -168,6 +161,14 @@ const router = createBrowserRouter([
   {
     path: '/about',
     element: <About></About>,
+  },
+  {
+    path:'/contact',
+    element:<ContactUs></ContactUs>
+  },
+  {
+    path:'/privacy-policy',
+    element:<Privacy></Privacy>
   },
   {
     path: '*',

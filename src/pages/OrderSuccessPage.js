@@ -32,10 +32,9 @@ function OrderSuccessPage() {
     // Simulate a loading time of 3 seconds
     const timeout = setTimeout(() => {
       fetchData();
-    }, 3000);
+    }, 2500);
 
     return () => clearTimeout(timeout); // Cleanup function to clear timeout
-
   }, [user.id]);
 
   useEffect(() => {
@@ -49,15 +48,22 @@ function OrderSuccessPage() {
     <>
       {!params.id && <Navigate to="/" replace={true}></Navigate>}
       {loading ? (
-        <div>Loading...</div> // Display a loading indicator while loading
+        <div className="relative flex justify-center items-center" style={{marginTop:'100px',paddingTop:'20px'}}>
+          <div className="absolute animate-spin rounded-full h-32 w-32 border-t-4 border-b-4 border-purple-500"></div>
+          <img
+            src="https://www.svgrepo.com/show/509001/avatar-thinking-9.svg"
+            className="rounded-full h-28 w-28"
+          />
+        </div> // Display a loading indicator while loading
       ) : (
         <>
           <div className="flex justify-center mt-3">
             <div className="w-full sm:w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 p-5 mx-auto">
               <p className="font-bold text-4xl">Thank you for your purchase!</p>
               <p className="mt-5">
-                Your order will be processed within 24 hours during working days.
-                We will notify you by email once your order has been shipped
+                Your order will be processed within 24 hours during working
+                days. We will notify you by email once your order has been
+                shipped
               </p>
               <img
                 className="h-28 w-auto rounded-full mx-auto mt-5"
@@ -70,7 +76,9 @@ function OrderSuccessPage() {
                 <table className="text-left mt-4">
                   <tr className="py-4">
                     <td className="w-32 font-bold">Name</td>
-                    <td className="text-left">{userDetail.addresses[0].name}</td>
+                    <td className="text-left">
+                      {userDetail.addresses[0].name}
+                    </td>
                   </tr>
                   <tr className="py-4">
                     <td className="font-bold">Address</td>
@@ -83,7 +91,9 @@ function OrderSuccessPage() {
                   </tr>
                   <tr className="py-4">
                     <td className="font-bold">Phone</td>
-                    <td className="text-left">{userDetail.addresses[0].phone}</td>
+                    <td className="text-left">
+                      {userDetail.addresses[0].phone}
+                    </td>
                   </tr>
                   <tr className="py-4">
                     <td className="font-bold">Email</td>
@@ -93,7 +103,7 @@ function OrderSuccessPage() {
               </div>
             </div>
           </div>
-          <div style={{marginLeft:'400px'}}> 
+          <div style={{ marginLeft: "400px" }}>
             <Link to="/">
               <button className=" bg-gray-800  hover:bg-gray-700 text-white p-2 rounded-lg w-36 mb-3">
                 Go back home

@@ -99,7 +99,7 @@ function NavBar({ children }) {
                             <span className="sr-only">Open user menu</span>
                             <img
                               className="h-8 w-8 rounded-full"
-                              src={userInfo.imageUrl}
+                              src={'https://cdn-icons-png.freepik.com/512/147/147140.png'}
                               alt=""
                             />
                           </Menu.Button>
@@ -178,7 +178,7 @@ function NavBar({ children }) {
                     <div className="flex-shrink-0">
                       <img
                         className="h-10 w-10 rounded-full"
-                        src={userInfo.imageUrl}
+                        src={'https://cdn-icons-png.freepik.com/512/147/147140.png'}
                         alt=""
                       />
                     </div>

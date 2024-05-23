@@ -3,6 +3,10 @@ import { selectError, selectLoggedInUser } from '../authSlice';
 import { Link, Navigate } from 'react-router-dom';
 import { loginUserAsync } from '../authSlice';
 import { useForm } from 'react-hook-form';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import {  Switch} from "@mui/material"
+import { useState } from 'react';
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -15,9 +19,39 @@ export default function Login() {
   } = useForm();
 
 
+    // state to manage the dark mode
+    const [toggleDarkMode, setToggleDarkMode] = useState(true);
+
+    // function to toggle the dark mode as true or false
+    const toggleDarkTheme = () => {
+      setToggleDarkMode(!toggleDarkMode);
+    };
+  
+    // applying the primary and secondary theme colors
+    const darkTheme = createTheme({
+      palette: {
+        mode: toggleDarkMode ? 'light' : 'dark', // handle the dark mode state on toggle
+        primary: {
+          main: '#90caf9',
+        },
+        secondary: {
+          main: '#131052',
+  
+        },
+      },
+    });
+
   return (
     <>
-      {user && <Navigate to="/" replace={true}></Navigate>}
+
+<ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <div>
+        <h2>Toggle Dark mode</h2>
+        <Switch checked={toggleDarkMode} onChange={toggleDarkTheme} />
+        {/* your project code goes here */}
+        
+        {user && <Navigate to="/" replace={true}></Navigate>}
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
@@ -25,7 +59,7 @@ export default function Login() {
             src="/ecommerce.png"
             alt="Your Company"
           />
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight ">
             Log in to your account
           </h2>
         </div>
@@ -43,7 +77,7 @@ export default function Login() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6"
               >
                 Email address
               </label>
@@ -70,7 +104,7 @@ export default function Login() {
               <div className="flex items-center justify-between">
                 <label
                   htmlFor="password"
-                  className="block text-sm font-medium leading-6 text-gray-900"
+                  className="block text-sm font-medium leading-6 "
                 >
                   Password
                 </label>
@@ -120,6 +154,11 @@ export default function Login() {
           </p>
         </div>
       </div>
-    </>
+
+
+      </div>
+    </ThemeProvider>
+
+          </>
   );
 }

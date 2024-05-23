@@ -4,8 +4,11 @@
   "proxy": "http://localhost:8080",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.17",
+    "@mui/material": "^5.15.18",
     "@reduxjs/toolkit": "^1.9.5",
     "@stripe/react-stripe-js": "^2.1.0",
     "@stripe/stripe-js": "^1.52.1",

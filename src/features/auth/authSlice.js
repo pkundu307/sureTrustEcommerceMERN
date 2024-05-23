@@ -6,7 +6,7 @@ import {
   checkAuth,
   resetPasswordRequest,
   resetPassword,
-} from './authAPI';
+} from './authApi';
 import { updateUser } from '../user/userAPI';
 
 const initialState = {

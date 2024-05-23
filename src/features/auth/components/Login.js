@@ -47,7 +47,7 @@ export default function Login() {
 <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <div>
-        <h2>Toggle Dark mode</h2>
+        <h2>Toggle for changin the theme</h2>
         <Switch checked={toggleDarkMode} onChange={toggleDarkTheme} />
         {/* your project code goes here */}
         
